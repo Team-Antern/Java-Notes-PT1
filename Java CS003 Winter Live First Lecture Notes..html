@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Java-CS003-Winter Live - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Java-CS003-Winter-Live" data-id="Java-CS003-Winter-Live"><a class="anchor hidden-xs" href="#Java-CS003-Winter-Live" title="Java-CS003-Winter-Live"><span class="octicon octicon-link"></span></a><strong><span>Java-CS003-Winter Live</span></strong></h1><h2 id="-Listings-and-Instructions" data-id="-Listings-and-Instructions"><a class="anchor hidden-xs" href="#-Listings-and-Instructions" title="-Listings-and-Instructions"><span class="octicon octicon-link"></span></a><img class="emoji" alt=":open_file_folder:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/open_file_folder.png"><span> </span><em><span>Listings and Instructions</span></em></h2><ol>
+<li><span>Important Words are listed by both </span><strong><span>Bold and </span><em><span>Italicized</span></em></strong><span>.</span></li>
+<li><span>This is for absolute beginners having </span><strong><span>1 or more month of experience working with Java</span></strong><span>.</span></li>
+<li><span>Stay tuned with us on Youtube for quality content and explanation </span><a href="https://youtube.com/channel/UCIpbqdvNWx50J79KAG1Q21A" target="_blank" rel="noopener"><strong><span>Antern</span></strong></a><span> and follow Team Antern on LinkedIn for free contents </span><a href="https://www.linkedin.com/company/team-antern" target="_blank" rel="noopener"><strong><span>LinkedIn</span></strong></a></li>
+<li><span>Go through the </span><strong><span>code very carefully</span></strong><span> and</span></li>
+<li><span>The Answers of </span><strong><strong><span>Test Yourself</span></strong></strong><span> is to be written in the </span><strong><span>Answers</span></strong><span class="ui-comment-inline-span"> </span><span>section on Server.</span></li>
+</ol><hr><h2 id="-Topics-Covered-Here" data-id="-Topics-Covered-Here"><a class="anchor hidden-xs" href="#-Topics-Covered-Here" title="-Topics-Covered-Here"><span class="octicon octicon-link"></span></a><img class="emoji" alt=":bookmark_tabs:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/bookmark_tabs.png"><span> </span><em><span>Topics Covered Here</span></em></h2><ol>
+<li><strong><span>Identifiers</span></strong><br>
+<span>a. </span><a href="#Sub-topic-A--Identifiers"><span>Identifiers</span></a><br>
+<span>b. </span><a href="#Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature"><span>Rules of Identifiers</span></a></li>
+<li><strong><span>Datatypes</span></strong>
+<ul>
+<li><a href="#What-are-Datatypes?"><span>What are Datatypes</span></a></li>
+<li><a href="#Case-Study-:-Local-Variable-Type-Inferencing"><span>Concept of Local Variable Type Inferencing.</span></a><br>
+<span>a. </span><a href="#byte"><span>byte</span></a><br>
+<span>b. </span><a href="#short"><span>short</span></a><br>
+<span>c. </span><a href="#int"><span>int</span></a><br>
+<span>d. </span><a href="#long"><span>long</span></a><br>
+<span>e. </span><a href="#float"><span>float</span></a><br>
+<span>f. </span><a href="#double"><span>double</span></a><br>
+<span>g. </span><a href="#boolean"><span>boolean</span></a><br>
+<span>h. </span><a href="#char"><span>char</span></a></li>
+</ul>
+</li>
+<li><strong><span>Variables</span></strong>
+<ul>
+<li><a href="#Variables"><span>Variables.</span></a></li>
+<li><a href="#Identifier-VS-Variable"><span>Identifiers vs Variables.</span></a></li>
+</ul>
+</li>
+</ol><hr><h2 id="-Frequently-Asked-QuestionsFAQs" data-id="-Frequently-Asked-QuestionsFAQs"><a class="anchor hidden-xs" href="#-Frequently-Asked-QuestionsFAQs" title="-Frequently-Asked-QuestionsFAQs"><span class="octicon octicon-link"></span></a><img class="emoji" alt=":question:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/question.png"><span> </span><strong><span>Frequently Asked Questions(FAQs)</span></strong></h2><ol>
+<li><a href="#Even-when-char-and-short-have-the-same-size,-they-have-different-range."><span>Even when </span><strong><span>char</span></strong><span> and </span><strong><span>short</span></strong><span> have the same size, they have different range.</span></a></li>
+<li><a href="##Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values"><span>Why using </span><strong><span>float</span></strong><span> is not preferred when dealing with higher floating point values.</span></a></li>
+</ol><hr><h2 id="Topic-1-Identifiers" data-id="Topic-1-Identifiers"><a class="anchor hidden-xs" href="#Topic-1-Identifiers" title="Topic-1-Identifiers"><span class="octicon octicon-link"></span></a><em><strong><span>Topic 1: Identifiers</span></strong></em></h2><h3 id="Sub-topic-A--Identifiers" data-id="Sub-topic-A--Identifiers"><a class="anchor hidden-xs" href="#Sub-topic-A--Identifiers" title="Sub-topic-A--Identifiers"><span class="octicon octicon-link"></span></a><strong><span>Sub-topic A : Identifiers</span></strong></h3><ol>
+<li>
+<p><span>Definition: - </span><strong><span>Identifiers are names  that are given to an element that identify an element of a program uniquely</span></strong></p>
+</li>
+<li>
+<p><span>What can be an Idenfier in a Java Program?</span></p>
+<ul>
+<li><span>All constants, variables, methods, classes, interfaces, packages, interfaces, enums, etc. can be identified by assigning to them an unique name. This unique name is called Identifier.</span><br>
+<img src="https://i.imgur.com/xPrupXN.jpg" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>
+<p><span>The above image </span><img class="emoji" alt=":arrow_up:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/arrow_up.png"><span> is of an organism. We identify the organism as a </span><strong><span>Human</span></strong><span>. Hence </span><em><span>Human</span></em><span> is an identifier since it identifies a specific type of organism uniquely.</span></p>
+</li>
+<li>
+<p><span>Why do we need identifiers?</span></p>
+<ul>
+<li><span>When it comes to real life, you must have heard about Scientific Names of organisms in Biology.</span></li>
+<li><span>And you must have heard about </span><strong><span>Nomenclature</span></strong><span>, or the </span><strong><span>process of naming an organism uniquely</span></strong><span>.</span></li>
+<li><span>Similarly, so as to tell our Java Virtual Machine that </span><strong><span>one element is different from another element of the same type, it is necessary to provide each element an unique name.</span></strong></li>
+<li><em><strong><span>So as to avoid name-space collisions between two common elements of a program, we mainly use Identifiers.</span></strong></em></li>
+<li><span>Eg: Suppose that in a class of 60 students, coincidentally 3 students having the same name namely: Krish Jaiswal. So how would you identify them uniquely? When a teacher calls “Krish Jaiswal”, all three stand up. </span><em><strong><span>Hence they all students have been allotted with Enrollment Numbers and Serial Numbers which is unique for a class. Hence the Enroll no. and Serial no. are identifiers.</span></strong></em></li>
+</ul>
+</li>
+</ol><hr><h3 id="Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature" data-id="Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature"><a class="anchor hidden-xs" href="#Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature" title="Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature"><span class="octicon octicon-link"></span></a><strong><span>Sub-Topic B: Rules of Identifiers or Nomenclature</span></strong></h3><ol>
+<li><span>Identifiers </span><strong><span>must start with</span></strong><span> </span><strong><span>$</span></strong><span> or </span><strong><span>‘_’</span></strong><span> or </span><strong><span>A-Z</span></strong><span> or </span><strong><span>a-z</span></strong><span>. It </span><strong><span>must contain</span></strong><span> any of these characters listed above.</span></li>
+<li><span>An Identifier Name </span><em><strong><span>must be a legit word</span></strong></em><span>.</span><br>
+<span>Eg: </span><strong><span>A person calls his/her water bottle as “Water Bottle” and not a “Bore Well”. It is possible to name the water bottle as “Bore Well” but it is not legitimate.</span></strong><span> Hence it should be a legitimate word.</span></li>
+<li><em><strong><span>An Identifier can be of any length.</span></strong></em><br>
+<span>Eg: If you have seen the </span><a href="https://youtu.be/bTuvEIyE6Fc" target="_blank" rel="noopener"><strong><span>Butterflow Pen Ad</span></strong></a><span>, you must have seen a person telling his name which would seem like the names of all persons living in his village. That kind of name is supported in Java but </span><strong><span>It is the Worst Programming Practice</span></strong><span>.</span></li>
+<li><em><strong><span>An Identifier cannot be a Keyword or Reserved Word in Java</span></strong></em><br>
+<span>Eg: -</span><pre><code class="Java hljs">    <span class="hljs-keyword">class</span> <span class="hljs-title">static</span>{ ... }    <span class="hljs-comment">// Syntax Error: -</span>
+    <span class="hljs-built_in">int</span> <span class="hljs-keyword">yield</span> = <span class="hljs-number">10</span>;         <span class="hljs-comment">//Syntax Error: -</span>
+    <span class="hljs-built_in">int</span> result = <span class="hljs-number">20</span>;        <span class="hljs-comment">//Absolutely Correct: -</span>
+</code></pre>
+</li>
+<li><span>There should be </span><em><strong><span>NO WHITESPACE</span></strong></em><span> character in the Identifier.</span><br>
+<span>Eg: You cannot have an identifier named </span><strong><span>demo 1</span></strong><span> for an element in Java.</span></li>
+<li><span>Java is </span><em><strong><span>case-sensitive</span></strong></em><span>. So if I write </span><strong><span>HELLO</span></strong><span> and </span><strong><span>hello</span></strong><span> it means a hell lot of difference.</span></li>
+<li><span>The identifier </span><strong><span>must not contain a digit (0-9).</span></strong><br>
+<span>Eg: Your name does not contain a digit.</span><pre><code class="Java hljs">    class <span class="hljs-number">123</span>abc{ ... }    <span class="hljs-comment">//Syntax Error</span>
+    <span class="hljs-keyword">int</span> <span class="hljs-number">3</span>A = <span class="hljs-number">10</span>; <span class="hljs-comment">//Syntax Error</span>
+    <span class="hljs-keyword">int</span> A3 = <span class="hljs-number">10</span>;  <span class="hljs-comment">//200% Correct.</span>
+</code></pre>
+</li>
+</ol><h4 id="Note" data-id="Note"><a class="anchor hidden-xs" href="#Note" title="Note"><span class="octicon octicon-link"></span></a><span>Note:</span></h4><ul>
+<li><span>It is not possible to remember all the rules. Generally, we just remember our </span><strong><span>Name</span></strong><span> and make out points from it.</span></li>
+<li><span>Eg: </span><strong><span>Name : </span><em><span>Krish Jaiswal</span></em></strong><span> : </span><em><span>Conclusions Drawn:</span></em>
+<ul>
+<li><span>The Name </span><strong><span>does not begin with any Number or digit</span></strong><span>.</span></li>
+<li><span>The Name </span><strong><span>may contain upper or lower case</span></strong><span> alphabetical characters.</span></li>
+<li><span>Considering </span><strong><span>Krish</span></strong><span>, there is </span><strong><span>no Whitespace</span></strong><span> here.</span></li>
+<li><span>Name is </span><strong><span>short and sweet</span></strong><span>. It is </span><strong><span>appropriate</span></strong><span>.</span></li>
+</ul>
+</li>
+</ul><hr><table>
+<thead>
+<tr>
+<th><span>Identifier Name</span></th>
+<th><span>Is It Valid?</span></th>
+<th><span>Invalid</span></th>
+<th><span>Reason</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>123af</span></td>
+<td><s><span>Valid</span></s></td>
+<td><strong><span>It is Invalid</span></strong></td>
+<td><strong><span>It must not start with a Number</span></strong></td>
+</tr>
+<tr>
+<td><span>_123</span></td>
+<td><strong><span>Valid</span></strong></td>
+<td><s><span>It is Invalid</span></s></td>
+<td><strong><span>Valid since it begins with an underscore ( _ )</span></strong></td>
+</tr>
+<tr>
+<td><span>$a</span></td>
+<td><strong><span>Valid</span></strong></td>
+<td><s><span>It is Invalid</span></s></td>
+<td><strong><span>Valid since it begins with a $ symbol</span></strong></td>
+</tr>
+<tr>
+<td><span>Abc</span></td>
+<td><strong><span>Valid</span></strong></td>
+<td><s><span>It is Invalid</span></s></td>
+<td><strong><span>Valid since it begins with an Aplhabetical Character.</span></strong></td>
+</tr>
+<tr>
+<td><span>1$221a</span></td>
+<td><s><span>Valid</span></s></td>
+<td><strong><span>It is Invalid</span></strong></td>
+<td><strong><span>Invalid because an identifier cannot begin with a number.</span></strong></td>
+</tr>
+<tr>
+<td><span>_abc</span></td>
+<td><strong><span>Valid</span></strong></td>
+<td><s><span>It is Invalid</span></s></td>
+<td><strong><span>Valid since it begins with an underscore</span></strong></td>
+</tr>
+<tr>
+<td><span>a bc12</span></td>
+<td><s><span>Valid</span></s></td>
+<td><strong><span>It is Invalid</span></strong></td>
+<td><strong><span>Invalid because it contains a whitespace</span></strong></td>
+</tr>
+<tr>
+<td><span>public</span></td>
+<td><s><span>Valid</span></s></td>
+<td><strong><span>It is Invalid</span></strong></td>
+<td><strong><span>Invalid because it is a reserved word in Java</span></strong><span>.</span></td>
+</tr>
+</tbody>
+</table><hr><h3 id="Sub-Topic-C-Test-Yourself" data-id="Sub-Topic-C-Test-Yourself"><a class="anchor hidden-xs" href="#Sub-Topic-C-Test-Yourself" title="Sub-Topic-C-Test-Yourself"><span class="octicon octicon-link"></span></a><strong><strong><span>Sub Topic C: Test Yourself</span></strong></strong></h3><ol>
+<li><span>How many identifiers are present in the below given program.</span><br>
+<span>Eg: String is an </span><strong><span>identifier</span></strong><span>. Hence </span><em><strong><span>count it only once.</span></strong></em><pre><code class="Java hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span></span>{
+     <span class="hljs-keyword">public</span> <span class="hljs-built_in">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args){
+         <span class="hljs-keyword">String</span> melody = <span class="hljs-string">"Why is Melody so Chocolatey"</span>;
+         <span class="hljs-keyword">String</span> answer = <span class="hljs-string">"Eat Melody! And that itself will give you the answer."</span>;
+     }   
+}
+</code></pre>
+</li>
+<li><strong><span>Predict</span></strong><span> the </span><strong><span>first line</span></strong><span> where the </span><strong><span>error may originate(if any)</span></strong><span> and </span><strong><span>explain the reason</span></strong><span>. : -</span><pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo1</span></span>{
+        <span class="hljs-keyword">public</span> <span class="hljs-built_in">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args){
+            <span class="hljs-keyword">int</span> <span class="hljs-number">3</span>_ide = <span class="hljs-number">20.0</span>;    <span class="hljs-comment">//1</span>
+            <span class="hljs-keyword">double</span> d1 = <span class="hljs-number">22</span>_00_3__<span class="hljs-number">.323</span>;    <span class="hljs-comment">//2</span>
+            <span class="hljs-keyword">String</span> str = <span class="hljs-string">"@Auth Krish"</span>;    <span class="hljs-comment">//3</span>
+        }
+    }
+</code></pre>
+</li>
+<li><em><strong><span>Can we have a deprecated reserved word as an identifier? State the reason for the same.</span></strong></em></li>
+<li><span>Which is/are a correct identifier/s?</span>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox" disabled="disabled"><span> ___dent</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox" disabled="disabled"><span> _:__dent</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox" disabled="disabled"><span> dent___</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox" disabled="disabled"><span> _</span><em><span>$</span></em></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox" disabled="disabled"><span> _transient</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox" disabled="disabled"><span> goto</span></li>
+</ul>
+</li>
+<li><span>Explain about </span><em><strong><span>Identifiers in your own words.</span></strong></em></li>
+</ol><hr><h2 id="Conclusions" data-id="Conclusions"><a class="anchor hidden-xs" href="#Conclusions" title="Conclusions"><span class="octicon octicon-link"></span></a><strong><strong><span>Conclusions</span></strong></strong></h2><ol>
+<li><span>Identifier is a name given to </span><strong><span>identify each element in a program uniquely to avoid name-space collisions.</span></strong></li>
+<li><span>So as to declare a word as Identifier in your program, you </span><strong><span>need to follow the Nomenclature of Elements/Rules of using Identifiers.</span></strong></li>
+<li><span>Identifiers must not be a </span><strong><span>reserved word</span></strong><span>, </span><strong><span>shouldn’t begin with a digit</span></strong><span>.</span></li>
+<li><span>Using the special character </span><strong><span>$</span></strong><span> and </span><strong><span>_</span></strong><span> is allowed.</span></li>
+<li><span>There must not be any </span><strong><span>WHITESPACE</span></strong><span> in the identifier.</span></li>
+<li><span>Suitable Identifier </span><strong><span>must be between 3 to 10 characters long and should define the use by its name itself.</span></strong><br>
+<span>Eg: </span><em><span>When writing a program that prints </span><strong><span>Hello World</span></strong><span>, the class name should be </span><strong><span>Hello</span></strong><span>.</span></em></li>
+</ol><hr><hr><hr><h2 id="Topic-2-Datatypes" data-id="Topic-2-Datatypes"><a class="anchor hidden-xs" href="#Topic-2-Datatypes" title="Topic-2-Datatypes"><span class="octicon octicon-link"></span></a><em><strong><span>Topic 2: Datatypes</span></strong></em></h2><h3 id="What-are-Datatypes" data-id="What-are-Datatypes"><a class="anchor hidden-xs" href="#What-are-Datatypes" title="What-are-Datatypes"><span class="octicon octicon-link"></span></a><em><span>What are Datatypes?</span></em></h3><p><em><span>Datatypes</span></em><span>: </span><strong><span>The type of data a variable can hold is called a Datatype.</span></strong></p><ul>
+<li><span>Datatypes allow variables to act as a container of a specific type which can store the values of the same specific type.</span><br>
+<span>Eg: To store liquids, you will use a container or vessel. That vessel may store different volumes of water. But all those vessel will store only liquids.</span>
+<ul>
+<li><em><span>Hence </span><strong><span>Liquid is a type of data a vessel(variable) can hold</span></strong><span> and the volume of the vessel is the range/capacity to which the variable can hold the type of data</span></em><span>.</span><br>
+<strong><span>- Vessel = Variable</span></strong><br>
+<strong><span>- Volume of Vessel = Range of Datatype</span></strong><br>
+<strong><span>- Liquid = Type of Data.</span></strong></li>
+</ul>
+</li>
+</ul><p><span>Why do we need a Datatype?</span></p><ul>
+<li><span>For Example: Let’s consider the same example given above. When you know the type of data, it becomes easier for you to choose a vessel. Similarly, when we consider this in Technological Terms, </span><strong><span>it becomes easier for the Compiler to choose a variable of convenient size and range.</span></strong></li>
+<li><span>But in the next case, we would see that the Compiler would detect the datatype automatically and would choose the required vessel.</span></li>
+<li><span>It </span><strong><span>increases the Efficiency of the Program</span></strong><span> during Runtime. It is </span><strong><span>because the Compiler knows how much memory is to be allocated for each variable of the given type.</span></strong></li>
+<li><strong><span>It would make a program robust and error free by preventing any kind of incompatible type error.</span></strong></li>
+</ul><h3 id="Case-Study--Local-Variable-Type-Inferencing" data-id="Case-Study--Local-Variable-Type-Inferencing"><a class="anchor hidden-xs" href="#Case-Study--Local-Variable-Type-Inferencing" title="Case-Study--Local-Variable-Type-Inferencing"><span class="octicon octicon-link"></span></a><strong><span>Case Study : Local Variable Type Inferencing</span></strong></h3><ul>
+<li>
+<p><span>An Interesting thing is to know that with JDK 10, you can use variables without even using datatypes.</span></p>
+</li>
+<li>
+<p><span>We will very soon learn that </span><strong><span>So as to use variables, we </span><em><strong><span>Must declare the variable prior to its use and it must be initialized with a value and its initializer type.</span></strong></em></strong></p>
+</li>
+<li>
+<p><span>But, in this case, the Compiler would automatically detect the type of initializer.</span></p>
+</li>
+<li>
+<p><span>This reduces code redundancy and helps in situations where deciding the type is difficult to make out or cannot be denoted.</span></p>
+</li>
+<li>
+<p><em><span>Definition</span></em><span>: </span><strong><span>Local Variable Type Inferencing is a concept where the Compiler automatically identifies/recognizes the type of data that is to be stored in the variables.</span></strong></p>
+</li>
+<li>
+<p><span>It is achieved by using a </span><strong><span>context-specific identifier</span></strong><span> namely: </span><strong><span>var</span></strong><span>.</span></p>
+</li>
+<li>
+<p><strong><span>var</span></strong><span> is context-specific since it depends on the place of the usage in a Java Program.</span></p>
+</li>
+<li>
+<p><span>Eg: Let’s Consider the Given Example: -</span></p>
+<pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+            <span class="hljs-keyword">var</span> i = <span class="hljs-number">10</span>;        <span class="hljs-comment">//var is an context specific identifier here.</span>
+            <span class="hljs-built_in">int</span> <span class="hljs-keyword">var</span> = <span class="hljs-number">10</span>;     <span class="hljs-comment">//var is an context-indefinite/user-defined identifier here.</span>
+        }
+    }
+
+</code></pre>
+</li>
+<li>
+<p><img src="https://i.imgur.com/J4ChVbq.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><span>In the above picture, </span><img class="emoji" alt=":arrow_up:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/arrow_up.png"><span> its visible that </span><strong><span>var</span></strong><span> acts as a </span><strong><span>context-specific identifier</span></strong><span>.</span></p>
+</li>
+<li>
+<p><strong><span>Definition</span></strong><span>: </span><strong><span>Context-Specific Identifier means an identifier(not a reserved word) having different functionalities when used at different places in a Java program.</span></strong></p>
+</li>
+<li>
+<p><span>Eg: of a program where </span><strong><span>var</span></strong><span> is an user-defined identifier.</span></p>
+<pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo2</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+            <span class="hljs-built_in">int</span> <span class="hljs-keyword">var</span>[] = {<span class="hljs-number">1</span>,<span class="hljs-number">23</span>,<span class="hljs-number">34</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>};  <span class="hljs-comment">//Here var is an user defined identifier.</span>
+        }
+    }
+
+</code></pre>
+</li>
+<li>
+<p><span>This Program shown above would not show any error.</span></p>
+</li>
+<li>
+<p><span>Syntax of User-Defined </span><strong><span>var</span></strong><span> named Identifier.</span></p>
+</li>
+<li>
+<p><img src="https://i.imgur.com/V7HW1JE.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><span>We would learn more about Local Variable Type Inferencing very soon in another Notes.</span></p>
+</li>
+</ul><hr><h3 id="Is-Java-Statically-Typed-Language" data-id="Is-Java-Statically-Typed-Language"><a class="anchor hidden-xs" href="#Is-Java-Statically-Typed-Language" title="Is-Java-Statically-Typed-Language"><span class="octicon octicon-link"></span></a><strong><span>Is Java Statically Typed Language?</span></strong></h3><ol>
+<li>
+<p><span>The Answer is </span><em><strong><span>Yes</span></strong></em><span>.</span></p>
+</li>
+<li>
+<p><strong><span>Reasons: -</span></strong></p>
+<ul>
+<li><strong><span>A variable must be declared with a datatype before its use.</span></strong></li>
+<li><strong><span>It must be initialized with an </span><em><span>initializer</span></em><span> before use</span></strong><span>.</span></li>
+</ul>
+</li>
+<li>
+<p><strong><span>Definition: Statically Typed Language is a Programming Language in which the Programmer needs to specify the type of data a variable can hold </span><em><span>EXPLICITLY</span></em><span> so that the Compiler can detect the common type errors long before the program actually executes</span></strong><span>.</span></p>
+</li>
+</ol><hr><h3 id="Question-Do-you-think-that-Java-is-still-statically-typed-after-the-introduction-of-Local-Variable-Type-Inferencing-in-JDK-10" data-id="Question-Do-you-think-that-Java-is-still-statically-typed-after-the-introduction-of-Local-Variable-Type-Inferencing-in-JDK-10"><a class="anchor hidden-xs" href="#Question-Do-you-think-that-Java-is-still-statically-typed-after-the-introduction-of-Local-Variable-Type-Inferencing-in-JDK-10" title="Question-Do-you-think-that-Java-is-still-statically-typed-after-the-introduction-of-Local-Variable-Type-Inferencing-in-JDK-10"><span class="octicon octicon-link"></span></a><strong><span>Question: Do you think that Java is still statically typed after the introduction of Local Variable Type Inferencing in JDK 10.?</span></strong></h3><hr><h2 id="Fooling-around-with-Java-Datatypes" data-id="Fooling-around-with-Java-Datatypes"><a class="anchor hidden-xs" href="#Fooling-around-with-Java-Datatypes" title="Fooling-around-with-Java-Datatypes"><span class="octicon octicon-link"></span></a><strong><span>Fooling around with Java Datatypes</span></strong><span>.</span></h2><ol>
+<li>
+<p><a href="https://s4.aconvert.com/convert/p3r68-cdx67/ae6mw-m0yl6.svg" target="_blank" rel="noopener"><strong><span>View the Type Dissociation into Primitive and Non-Primitive</span></strong></a></p>
+</li>
+<li>
+<p><span>In the image shown above, it is clear that there are two forms of Datatypes namely: </span><strong><span>Primitive and Non-Primitive</span></strong><span>.</span></p>
+</li>
+</ol><h4 id="Primitive-Datatypes" data-id="Primitive-Datatypes"><a class="anchor hidden-xs" href="#Primitive-Datatypes" title="Primitive-Datatypes"><span class="octicon octicon-link"></span></a><em><strong><span>Primitive Datatypes</span></strong></em></h4><ul>
+<li><strong><span>Signed Numbers --&gt; Signed Numbers are numbers whose range is from a negative to a positive number and these numbers contain the Most Significant Bit which denotes whether the number is negative or positive.</span></strong></li>
+<li><strong><span>Datatypes having a fixed range and a predefined size built for just improving the efficiency of the program that cannot be instantiated, are called Primitive Datatypes.</span></strong></li>
+<li><span>But what is </span><strong><span>Instantiation</span></strong><span>?</span></li>
+<li><strong><span>Instantiation means creating the objects so that its properties(variables) like hair color, skin color, etc. and behavior(methods) like eating, sleeping, etc. can be accessed.</span></strong><span> We will learn more about Instantiation in the subsequent notes of Object Oriented Programming.</span></li>
+<li><span>There are some </span><strong><span>special characteristics</span></strong><span> of these types: -</span>
+<ul>
+<li><strong><span>They have a fixed size.</span></strong><br>
+<span>Eg: </span><a href="https://www.middleschoolchemistry.com/img/content/lessons/3.2/girl_examining_cylinder_in_graduated_cylinder.jpg" target="_blank" rel="noopener"><strong><span>Visit this Link</span></strong></a><span> You have measuring cylinders which consumes some area when placed on a table.</span></li>
+<li><strong><span>They have a fixed range.</span></strong><br>
+<span>Eg: For a measuring cylinder, they can store only a fixed volume. If we try to fill more, an overflow happens. In Java, overflow of range in case of Primitive types results in a syntax error namely </span><strong><span>integer number too large</span></strong><span>.</span></li>
+<li><strong><span>They store a specific datatype</span></strong><br>
+<span>Eg: You store water in an overhead tank and not fruit juice. In case of Java, if there is a type mismatch, then a syntax error namely </span><strong><span>incompatible types</span></strong><span>.</span></li>
+<li><strong><span>You cannot create the object of Primitive types</span></strong><br>
+<span>EG:</span></li>
+</ul>
+<pre><code class="Java hljs">    <span class="hljs-built_in">int</span> a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">20</span>);        <span class="hljs-comment">//Results in an error.</span>
+    <span class="hljs-built_in">int</span> a = <span class="hljs-number">20</span>;         <span class="hljs-comment">//Works Successfully</span>
+
+</code></pre>
+</li>
+<li><span>Its important to see the division of Java Datatypes in the Primitive and Non-Primitive Hierarchy. If you not yet seen it, its important to see it…</span></li>
+</ul><h5 id="Why-there-are-Primitive-types-at-all-in-Java" data-id="Why-there-are-Primitive-types-at-all-in-Java"><a class="anchor hidden-xs" href="#Why-there-are-Primitive-types-at-all-in-Java" title="Why-there-are-Primitive-types-at-all-in-Java"><span class="octicon octicon-link"></span></a><strong><span>Why there are Primitive types at all in Java?</span></strong></h5><ol>
+<li><span>Answer to this, it is just for increasing the efficiency of a Java Program both by Memory and Time.</span></li>
+<li><span>As already mentioned, its easier for you to choose a vessel prior to filling up the liquid in the vessel.</span></li>
+<li><span>Now watch this dramatic conversation between a Compiler and a Programmer on the program given below.</span></li>
+</ol><pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo3</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String args[]</span>)</span>{
+            <span class="hljs-built_in">int</span> a = <span class="hljs-number">20</span>;
+            <span class="hljs-built_in">double</span> b = <span class="hljs-number">90.4543</span>;
+            <span class="hljs-built_in">char</span> ch = <span class="hljs-string">'a'</span>;
+       }
+   }
+</code></pre><p><strong><span>Programmer</span></strong><span>: Hey </span><em><span>Compiler</span></em><span>, please </span><strong><span>compile</span></strong><span> this source code and create a bytecode file.</span><br>
+<strong><span>Compiler</span></strong><span>: Okay dude, there are no syntax errors and everything seems fine. I am compiling the code…Please wait a moment.</span><br>
+<strong><span>Compiler</span></strong><span>: Hey Pal, I have compiled the code and have mentioned </span><strong><span>how many bytes of memory should be allocated for the Primitive types you initialized in the ByteCode</span></strong><span>.(</span><em><span>Bytecode or intermediate code is the highly optimized, platform independent set of instructions that is passed to the JVM to be converted to Machine Native Code.</span></em><span>)</span><br>
+<strong><span>Programmer</span></strong><span>: Why do you need to tell the JVM that how much size is to be required?</span><br>
+<strong><span>Compiler</span></strong><span>: It is necessary Pal. If I dont inform JVM about the size, it would have to search it by himself and that would take a lot of time.</span><br>
+<strong><span>Compiler</span></strong><span>: Moreover, I cannot let you and JVM struggle for time and space.</span><br>
+<strong><span>Programmer</span></strong><span>: Greatful to you, my friend.</span></p><ol start="4">
+<li><span>So, this is the dramatic reason why Primitive types have a fixed range and size.</span></li>
+</ol><hr><p><span>Time to know about the Primitive Datatypes one by one.</span></p><h1 id="Integral-Datatypes" data-id="Integral-Datatypes"><a class="anchor hidden-xs" href="#Integral-Datatypes" title="Integral-Datatypes"><span class="octicon octicon-link"></span></a><strong><span>Integral Datatypes</span></strong></h1><h2 id="byte" data-id="byte"><a class="anchor hidden-xs" href="#byte" title="byte"><span class="octicon octicon-link"></span></a><strong><span>byte</span></strong></h2><ol>
+<li><strong><span>Size --&gt; 1 Byte or 8 bits.</span></strong></li>
+<li><strong><span>Range --&gt; -128 to 127.</span></strong></li>
+<li><span>Generally used in case of </span><strong><span>transferring Strings across Networks and writing files with Character and Byte Streams</span></strong><span>.</span></li>
+<li><strong><span>MAX_VALUE :  127</span></strong></li>
+<li><strong><span>MIN_VALUE : -128</span></strong></li>
+<li><img src="https://i.imgur.com/C2lfz1T.jpg" alt="" loading="lazy"></li>
+<li><span>The </span><strong><span>MSD</span></strong><span> stands for </span><strong><span>Most Significant Bit</span></strong><span>. This stores either 0(negative) or 1(positive). </span><strong><span>In Signed Integers, this MSD signifies whether the number stored is positive(zero or more than zero) or negative(less than zero).</span></strong></li>
+<li><span>If you add </span><strong><span>2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0</span></strong><span>, you would get the sum as </span><strong><span>127</span></strong><span>.</span></li>
+</ol><h3 id="Operations-on-a-byte-datatype" data-id="Operations-on-a-byte-datatype"><a class="anchor hidden-xs" href="#Operations-on-a-byte-datatype" title="Operations-on-a-byte-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on a </span><em><span>byte</span></em><span> datatype</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo4</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">double</span> a = <span class="hljs-number">20.52</span>;
+             <span class="hljs-built_in">byte</span> b = a; <span class="hljs-comment">//Possible Loss of Precision.</span>
+         }
+     }
+</code></pre>
+</li>
+<li>
+<pre><code class="Java hljs"> 
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo5</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             String str = <span class="hljs-string">"Krish Jaiswal"</span>;
+             <span class="hljs-built_in">byte</span> b = str;    <span class="hljs-comment">// Incompatible Types. found: java.lang.String ; required: byte</span>
+         }
+     }
+
+</code></pre>
+<strong><span>Infamous Error in case of Datatypes are :-</span></strong>
+<ol>
+<li><strong><span>Possible Loss of Precision</span></strong><span>: It is caused due </span><em><strong><span>to possible loss of some value during assignment to a variable having a different type</span></strong></em><span>.</span></li>
+<li><strong><span>Incompatible Types</span></strong><span>: It is caused when two datatypes, which are </span><em><strong><span>not compatible and hold no relation with each other are assigned or explicitly casted.</span></strong></em></li>
+</ol>
+</li>
+</ol><hr><h2 id="short" data-id="short"><a class="anchor hidden-xs" href="#short" title="short"><span class="octicon octicon-link"></span></a><strong><span>short</span></strong></h2><ol>
+<li><strong><span>Size --&gt; 2 Byte or 16 bits.</span></strong></li>
+<li><strong><span>Range --&gt; -32768 to 32767.</span></strong></li>
+<li><span>Was </span><strong><span>previously used for Intel 8086 16 bit Processors which existed during late 1990s and early 2000s since it provided efficiency there too.</span></strong></li>
+<li><strong><span>MAX_VALUE :  32767</span></strong></li>
+<li><strong><span>MIN_VALUE : -32768</span></strong></li>
+<li><span>The </span><strong><span>MSD</span></strong><span> stands for </span><strong><span>Most Significant Bit</span></strong><span>. This stores either 0(negative) or 1(positive). </span><strong><span>In Signed Integers, this MSD signifies whether the number stored is positive(zero or more than zero) or negative(less than zero).</span></strong></li>
+<li><span>If you add </span><strong><span>2^15 + 2^14 + 2^13 + 2^12 + 2^11 + 2^10 + 2^9</span></strong><span> + …, you would get the sum as </span><strong><span>32767</span></strong><span>.</span></li>
+</ol><h3 id="Operations-on-a-short-datatype" data-id="Operations-on-a-short-datatype"><a class="anchor hidden-xs" href="#Operations-on-a-short-datatype" title="Operations-on-a-short-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on a </span><em><span>short</span></em><span> datatype</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo6</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">double</span> a = <span class="hljs-number">20.52</span>;
+             <span class="hljs-built_in">short</span> b = a; <span class="hljs-comment">//Possible Loss of Precision.</span>
+         }
+     }
+</code></pre>
+</li>
+<li>
+<pre><code class="Java hljs"> 
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo7</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             String str = <span class="hljs-string">"Krish Jaiswal"</span>;
+             <span class="hljs-built_in">short</span> b = str;    <span class="hljs-comment">// Incompatible Types. found: java.lang.String ; required: short</span>
+         }
+     }
+
+</code></pre>
+</li>
+</ol><hr><h2 id="int" data-id="int"><a class="anchor hidden-xs" href="#int" title="int"><span class="octicon octicon-link"></span></a><strong><span>int</span></strong></h2><ol>
+<li><strong><span>Size --&gt; 4 Bytes or 32 bits.</span></strong></li>
+<li><strong><span>Range --&gt; -2147483648 to 2147483647.</span></strong></li>
+<li><span>It is the </span><strong><span>default integral datatype. It is frequently used. It has a wide range of uses.</span></strong></li>
+<li><strong><span>MAX_VALUE :  2147483647</span></strong></li>
+<li><strong><span>MIN_VALUE : -2147483648</span></strong></li>
+<li><span>If you add </span><strong><span>2^31 + 2^30 + 2^29 + 2^28 + 2^27 + 2^26 + 2^25</span></strong><span> + …, you would get the sum as </span><strong><span>2147483647</span></strong><span>.</span></li>
+</ol><h3 id="Operations-on-a-int-datatype" data-id="Operations-on-a-int-datatype"><a class="anchor hidden-xs" href="#Operations-on-a-int-datatype" title="Operations-on-a-int-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on a </span><em><span>int</span></em><span> datatype</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo8</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">int</span> b = <span class="hljs-number">10l</span>; <span class="hljs-comment">//Possible Loss of Precision since "l" denotes a long datatype.</span>
+         }
+     }
+</code></pre>
+</li>
+<li>
+<pre><code class="Java hljs"> 
+     <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo9</span></span>{
+         <span class="hljs-keyword">public</span> <span class="hljs-built_in">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args){
+             <span class="hljs-keyword">String</span> str = <span class="hljs-string">"Krish Jaiswal"</span>;
+             <span class="hljs-keyword">int</span> b = str;    <span class="hljs-comment">// Incompatible Types. found: java.lang.String ; required: int</span>
+         }
+     }
+
+</code></pre>
+</li>
+<li>
+<pre><code class="Java hljs"> 
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo10</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">int</span> a = <span class="hljs-number">20</span>;
+             <span class="hljs-built_in">int</span> b = a*<span class="hljs-number">4</span>+<span class="hljs-number">1</span>;
+             System.<span class="hljs-keyword">out</span>.println(b);
+         }
+     }
+
+</code></pre>
+</li>
+</ol><h2 id="long" data-id="long"><a class="anchor hidden-xs" href="#long" title="long"><span class="octicon octicon-link"></span></a><strong><span>long</span></strong></h2><ol>
+<li><strong><span>Size --&gt; 8 Bytes or 64 bits.</span></strong></li>
+<li><strong><span>Range --&gt; -9_223_372_036_854_775_808 to 9_223_372_036_854_775_807.</span></strong></li>
+<li><span>It is a signed 64 bit type used for storing excessive large or small numbers that may surpass the range of </span><strong><span>int</span></strong><span> datatype.</span></li>
+<li><strong><span>MAX_VALUE :  9_223_372_036_854_775_807</span></strong></li>
+<li><strong><span>MIN_VALUE : -9_223_372_036_854_775_808</span></strong></li>
+<li><span>If you add </span><strong><span>2^63 + 2^62 + 2^61 + 2^60 + 2^59 + 2^58 + 2^57</span></strong><span> + …, you would get the sum as </span><strong><span>9_223_372_036_854_775_807</span></strong><span>.</span></li>
+</ol><h3 id="Operations-on-long-datatype" data-id="Operations-on-long-datatype"><a class="anchor hidden-xs" href="#Operations-on-long-datatype" title="Operations-on-long-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on </span><em><span>long</span></em><span> datatype.</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs"> 
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo11</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             String str = <span class="hljs-string">"Krish Jaiswal"</span>;
+             <span class="hljs-built_in">long</span> b = str;    <span class="hljs-comment">// Incompatible Types. found: java.lang.String ; required: int</span>
+         }
+     }
+
+</code></pre>
+</li>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo12</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">long</span> var1 = <span class="hljs-number">104</span> * <span class="hljs-number">203</span> ;
+             <span class="hljs-built_in">long</span> var2 = <span class="hljs-number">2147483648</span> ; <span class="hljs-comment">//Gives a compile time error: integer number too large.</span>
+             <span class="hljs-comment">/*
+             * A long datatype has a default value as 0l. 
+             * Here 'l' denotes that the number is of long type. 
+             * Since all numbers are by default of 'int' type, Compiler gives an error if it finds that the range is exceeded.
+             */</span>
+             
+             <span class="hljs-built_in">long</span> var3 = <span class="hljs-number">2147483648l</span> ; <span class="hljs-comment">// No Error.</span>
+         }
+     }
+</code></pre>
+</li>
+</ol><hr><h1 id="Floating-Point-Types" data-id="Floating-Point-Types"><a class="anchor hidden-xs" href="#Floating-Point-Types" title="Floating-Point-Types"><span class="octicon octicon-link"></span></a><strong><span>Floating-Point Types</span></strong></h1><ol>
+<li><span>Java implements the standards of IEEE 754 set of floating point types and operators.</span></li>
+<li><span>Floating Point means </span><strong><span>real numbers</span></strong><span>.</span><br>
+<span>Eg: There are 2 consecutive numbers. Let’s say 20 and 21. So the number between 20 and 21 can be 20.302, 20.1, 20.2, etc.</span></li>
+</ol><h2 id="float" data-id="float"><a class="anchor hidden-xs" href="#float" title="float"><span class="octicon octicon-link"></span></a><strong><span>float</span></strong></h2><ol>
+<li><strong><span>Size --&gt; 4 Bytes or 32 bits.</span></strong></li>
+<li><strong><span>Range --&gt; 1.4e-045 to 3.4e+38.</span></strong></li>
+<li><span>It specifies a </span><em><span>single-precision</span></em><span> value that uses 32 bits of storage. Single precision are useful on some processors and hence is used in storing floating point values.</span></li>
+</ol><h3 id="Operations-on-float-datatype" data-id="Operations-on-float-datatype"><a class="anchor hidden-xs" href="#Operations-on-float-datatype" title="Operations-on-float-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on </span><em><span>float</span></em><span> datatype</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo13</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">float</span> f = <span class="hljs-number">2.13421f</span>;
+             <span class="hljs-comment">/*
+             * Since all the floating point numbers have 'double' type as default type, we need to explicitly specify that our number is a float type.
+             * This is done by adding 'f' to the number.               
+             */</span>
+             
+             <span class="hljs-built_in">float</span> f2 = <span class="hljs-number">32.3212123</span> ; <span class="hljs-comment">//Compile Time Error occurs: Possible Loss of Precision.</span>
+         }
+     }
+</code></pre>
+</li>
+</ol><h2 id="double" data-id="double"><a class="anchor hidden-xs" href="#double" title="double"><span class="octicon octicon-link"></span></a><strong><span>double</span></strong></h2><ol>
+<li><strong><span>Size --&gt; 8 Bytes or 64 bits.</span></strong></li>
+<li><strong><span>Range --&gt; 4.9e-324 to 1.8e+308 .</span></strong></li>
+<li><span>It specifies a Double Precision that uses 64 bit of storage. It is the default datatype for all floating datatypes.</span></li>
+</ol><h3 id="Operations-on-double-datatype" data-id="Operations-on-double-datatype"><a class="anchor hidden-xs" href="#Operations-on-double-datatype" title="Operations-on-double-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on </span><em><span>double</span></em><span> datatype</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo14</span>{
+         <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+             <span class="hljs-built_in">double</span> d = <span class="hljs-number">2.48213121</span>;
+         }
+     }
+</code></pre>
+</li>
+</ol><hr><h1 id="Character" data-id="Character"><a class="anchor hidden-xs" href="#Character" title="Character"><span class="octicon octicon-link"></span></a><strong><span>Character</span></strong></h1><h2 id="char" data-id="char"><a class="anchor hidden-xs" href="#char" title="char"><span class="octicon octicon-link"></span></a><strong><span>char</span></strong></h2><ol>
+<li><span>This datatype is </span><strong><span>used to store characters.</span></strong></li>
+<li><span>It uses </span><strong><span>Unicode standard that is a fully international character set of 2^16 characters containing Arabic, Chinese, Hebrew, etc. totalling to 65,535 characters.</span></strong></li>
+<li><span>It is </span><strong><span>not a signed datatype. It means that it cannot have a negative value</span></strong><span>.</span></li>
+<li><span>Unicode system is combination of other smaller character sets like </span><strong><span>ISO-Latin1</span></strong><span> and </span><strong><span>ASCII.</span></strong></li>
+<li><span>Characters are </span><strong><span>internally represented as integral numbers.</span></strong><br>
+<span>Eg: Try executing this code:-</span><pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Demo15</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+            <span class="hljs-built_in">char</span> ch = <span class="hljs-string">'a'</span>;
+            <span class="hljs-built_in">int</span> asc = ch;    <span class="hljs-comment">//Compiler internally represents a character as an integer number and hence assigning a character to an integer type variable gives no errors at all.</span>
+            System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"Integer Value of "</span>+ch+<span class="hljs-string">" is : "</span>+asc);
+        }
+    }
+</code></pre>
+<span>Output: -</span><pre><code>    Integer Value of a is : 97
+</code></pre>
+</li>
+<li><span>We would be understanding </span><strong><span>Implicit Type Casting</span></strong><span> in some other lectures.</span></li>
+</ol><h1 id="Boolean" data-id="Boolean"><a class="anchor hidden-xs" href="#Boolean" title="Boolean"><span class="octicon octicon-link"></span></a><strong><span>Boolean</span></strong></h1><h2 id="boolean" data-id="boolean"><a class="anchor hidden-xs" href="#boolean" title="boolean"><span class="octicon octicon-link"></span></a><strong><span>boolean</span></strong></h2><ol>
+<li><span>Does your toothpaste have salt in it?</span></li>
+<li><span>Are you 54 years old?</span></li>
+<li><em><span>boolean</span></em><span> is a datatype which helps us to </span><strong><span>classify a condition in </span><em><strong><span>true</span></strong></em><span> and </span><em><strong><span>false</span></strong></em></strong><span> .</span></li>
+<li><span>So, imagine this situation:-</span>
+<ul>
+<li><span>Person 1: Is it sunny Outside?</span></li>
+<li><span>Person 2: No (false).</span></li>
+<li><span>Person 2: Should we carry umbrella?</span></li>
+<li><span>Person 1: No (false).</span></li>
+</ul>
+</li>
+<li><span>These things are represented by </span><strong><span>boolean</span></strong><span> datatype.</span></li>
+<li><span>All </span><strong><span>Relational and Logical conditions are either in true or in false, which means they have </span><strong><span>boolean</span></strong><span> as the only type.</span></strong></li>
+<li><span>Interestingly, it </span><strong><span>cannot be type casted (either implicitly or explicitly) to any other datatype.</span></strong><span> Doing that would give a Compile Time Error : </span><strong><span>incompatible types</span></strong><span>.</span></li>
+</ol><h3 id="Operations-on-boolean-datatype" data-id="Operations-on-boolean-datatype"><a class="anchor hidden-xs" href="#Operations-on-boolean-datatype" title="Operations-on-boolean-datatype"><span class="octicon octicon-link"></span></a><strong><span>Operations on </span><em><span>boolean</span></em><span> datatype</span></strong></h3><ol>
+<li>
+<pre><code class="Java hljs">     <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo16</span></span>{
+         <span class="hljs-keyword">public</span> <span class="hljs-built_in">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args){
+             <span class="hljs-keyword">boolean</span> b = <span class="hljs-literal">true</span>;
+             <span class="hljs-keyword">boolean</span> x = <span class="hljs-literal">false</span>;
+             
+             <span class="hljs-keyword">int</span> a = <span class="hljs-number">20</span>;
+             <span class="hljs-keyword">boolean</span> result = (a&gt;<span class="hljs-number">20</span>)?<span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>;    <span class="hljs-comment">//Ternary Operations would be covered in subsequent lectures.</span>
+             <span class="hljs-keyword">int</span> val = <span class="hljs-number">1</span>;
+             <span class="hljs-keyword">boolean</span> wrong = val; <span class="hljs-comment">//Compile Time Error. Incompatible types.</span>
+         }
+     }
+</code></pre>
+</li>
+</ol><hr><h1 id="How-Prepared-you-Are" data-id="How-Prepared-you-Are"><a class="anchor hidden-xs" href="#How-Prepared-you-Are" title="How-Prepared-you-Are"><span class="octicon octicon-link"></span></a><strong><span>How Prepared you Are?</span></strong></h1><ol>
+<li><span>What would be the first line to generate an error in this program.: -</span><pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Test2</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+            <span class="hljs-built_in">int</span> a = <span class="hljs-number">10.34</span>;         <span class="hljs-comment">// 1</span>
+            <span class="hljs-built_in">double</span> b = <span class="hljs-number">45.302f</span>;    <span class="hljs-comment">//2</span>
+            <span class="hljs-built_in">char</span> ch = <span class="hljs-number">97</span>;        <span class="hljs-comment">//3;</span>
+        }
+    }
+</code></pre>
+</li>
+<li><span>Why Java makes use of primitive datatypes?</span></li>
+<li><span>Predict the Output:-</span><pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Test3</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+            <span class="hljs-built_in">int</span> g = <span class="hljs-string">'a'</span>;
+            System.<span class="hljs-keyword">out</span>.println(g);
+        }
+    }
+</code></pre>
+</li>
+<li><span>Predict the Output: -</span><pre><code class="Java hljs">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Test4</span>{
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>{
+            <span class="hljs-built_in">double</span> <span class="hljs-number">2f</span>t = <span class="hljs-number">50.32f</span>;   
+        }
+    }
+</code></pre>
+</li>
+</ol><hr><h1 id="Variables" data-id="Variables"><a class="anchor hidden-xs" href="#Variables" title="Variables"><span class="octicon octicon-link"></span></a><strong><span>Variables</span></strong></h1><ol>
+<li><strong><span>Definition: Variables are just like vessels which store some specific thing. In tech terms, Variables are </span><em><span>user-allocated memory locations</span></em><span> which store some value and their value can be changed during the execution of a program</span></strong><span>.</span></li>
+<li><strong><span>user-allocated</span></strong><span> since user tells the compiler to reserve the memory location for a vessel of </span><em><span>x</span></em><span> type.</span></li>
+<li><span>All variables are identifiers so they follow all the naming conventions of identifiers.</span></li>
+</ol><h2 id="Identifier-VS-Variable" data-id="Identifier-VS-Variable"><a class="anchor hidden-xs" href="#Identifier-VS-Variable" title="Identifier-VS-Variable"><span class="octicon octicon-link"></span></a><strong><span>Identifier VS Variable</span></strong></h2><table>
+<thead>
+<tr>
+<th><span>Identifier</span></th>
+<th><span>Variable</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Identifier is a unique name given to each and every entity of a program for its unique identification in the whole program.</span></td>
+<td><span>Variables are user allocated memory locations that hold some value which can be   changed during the execution of the program.</span></td>
+</tr>
+<tr>
+<td><span>They are used for identification purposes.</span></td>
+<td><span>They are used for storing values of a given type</span></td>
+</tr>
+</tbody>
+</table><hr><h1 id="Frequently-Asked-Questions" data-id="Frequently-Asked-Questions"><a class="anchor hidden-xs" href="#Frequently-Asked-Questions" title="Frequently-Asked-Questions"><span class="octicon octicon-link"></span></a><strong><span>Frequently Asked Questions</span></strong></h1><h2 id="Even-when-char-and-short-have-the-same-size-they-have-different-range" data-id="Even-when-char-and-short-have-the-same-size-they-have-different-range"><a class="anchor hidden-xs" href="#Even-when-char-and-short-have-the-same-size-they-have-different-range" title="Even-when-char-and-short-have-the-same-size-they-have-different-range"><span class="octicon octicon-link"></span></a><em><strong><span>Even when char and short have the same size, they have different range.</span></strong></em></h2><p><span>Answer: </span><em><span>char</span></em><span> is not a integer or floating point datatype. It means that it cannot have any negative value. Hence the Most Significant Bit would be free since it need not store any 0 or 1 for denoting a positive or negative number.But </span><em><span>short</span></em><span> is a integral datatype used for storing integers. So, the Compiler should be made aware that the number stored in a variable of type </span><em><span>short</span></em><span> is positive or negative. Hence the Most Significant Bit stores 0 or 1 denoting the number as positive or negative.  Hence, </span><strong><span>char being of 2 bytes has a max range of 65,535 and short being of 2 bytes has a max range of 32767</span></strong></p><hr><h2 id="Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values" data-id="Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values"><a class="anchor hidden-xs" href="#Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values" title="Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values"><span class="octicon octicon-link"></span></a><em><strong><span>Why using float is not preferred when dealing with higher floating point values.</span></strong></em></h2><p><span>Answer: </span><em><span>float</span></em><span> results in loss of precision at higher values. Hence it is not safe to use float with higher floating point values.</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#Java-CS003-Winter-Live" title="Java-CS003-Winter Live">Java-CS003-Winter Live</a><ul class="nav">
+<li><a href="#-Listings-and-Instructions" title=" Listings and Instructions"> Listings and Instructions</a></li>
+<li><a href="#-Topics-Covered-Here" title=" Topics Covered Here"> Topics Covered Here</a></li>
+<li><a href="#-Frequently-Asked-QuestionsFAQs" title=" Frequently Asked Questions(FAQs)"> Frequently Asked Questions(FAQs)</a></li>
+<li><a href="#Topic-1-Identifiers" title="Topic 1: Identifiers">Topic 1: Identifiers</a><ul class="nav">
+<li><a href="#Sub-topic-A--Identifiers" title="Sub-topic A : Identifiers">Sub-topic A : Identifiers</a></li>
+<li><a href="#Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature" title="Sub-Topic B: Rules of Identifiers or Nomenclature">Sub-Topic B: Rules of Identifiers or Nomenclature</a></li>
+<li><a href="#Sub-Topic-C-Test-Yourself" title="Sub Topic C: Test Yourself">Sub Topic C: Test Yourself</a></li>
+</ul>
+</li>
+<li><a href="#Conclusions" title="Conclusions">Conclusions</a></li>
+<li><a href="#Topic-2-Datatypes" title="Topic 2: Datatypes">Topic 2: Datatypes</a><ul class="nav">
+<li><a href="#What-are-Datatypes" title="What are Datatypes?">What are Datatypes?</a></li>
+<li><a href="#Case-Study--Local-Variable-Type-Inferencing" title="Case Study : Local Variable Type Inferencing">Case Study : Local Variable Type Inferencing</a></li>
+<li><a href="#Is-Java-Statically-Typed-Language" title="Is Java Statically Typed Language?">Is Java Statically Typed Language?</a></li>
+<li><a href="#Question-Do-you-think-that-Java-is-still-statically-typed-after-the-introduction-of-Local-Variable-Type-Inferencing-in-JDK-10" title="Question: Do you think that Java is still statically typed after the introduction of Local Variable Type Inferencing in JDK 10.?">Question: Do you think that Java is still statically typed after the introduction of Local Variable Type Inferencing in JDK 10.?</a></li>
+</ul>
+</li>
+<li><a href="#Fooling-around-with-Java-Datatypes" title="Fooling around with Java Datatypes.">Fooling around with Java Datatypes.</a></li>
+</ul>
+</li>
+<li><a href="#Integral-Datatypes" title="Integral Datatypes">Integral Datatypes</a><ul class="nav">
+<li><a href="#byte" title="byte">byte</a><ul class="nav">
+<li><a href="#Operations-on-a-byte-datatype" title="Operations on a byte datatype">Operations on a byte datatype</a></li>
+</ul>
+</li>
+<li><a href="#short" title="short">short</a><ul class="nav">
+<li><a href="#Operations-on-a-short-datatype" title="Operations on a short datatype">Operations on a short datatype</a></li>
+</ul>
+</li>
+<li><a href="#int" title="int">int</a><ul class="nav">
+<li><a href="#Operations-on-a-int-datatype" title="Operations on a int datatype">Operations on a int datatype</a></li>
+</ul>
+</li>
+<li><a href="#long" title="long">long</a><ul class="nav">
+<li><a href="#Operations-on-long-datatype" title="Operations on long datatype.">Operations on long datatype.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Floating-Point-Types" title="Floating-Point Types">Floating-Point Types</a><ul class="nav">
+<li><a href="#float" title="float">float</a><ul class="nav">
+<li><a href="#Operations-on-float-datatype" title="Operations on float datatype">Operations on float datatype</a></li>
+</ul>
+</li>
+<li><a href="#double" title="double">double</a><ul class="nav">
+<li><a href="#Operations-on-double-datatype" title="Operations on double datatype">Operations on double datatype</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Character" title="Character">Character</a><ul class="nav">
+<li><a href="#char" title="char">char</a></li>
+</ul>
+</li>
+<li><a href="#Boolean" title="Boolean">Boolean</a><ul class="nav">
+<li><a href="#boolean" title="boolean">boolean</a><ul class="nav">
+<li><a href="#Operations-on-boolean-datatype" title="Operations on boolean datatype">Operations on boolean datatype</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#How-Prepared-you-Are" title="How Prepared you Are?">How Prepared you Are?</a></li>
+<li><a href="#Variables" title="Variables">Variables</a><ul class="nav">
+<li><a href="#Identifier-VS-Variable" title="Identifier VS Variable">Identifier VS Variable</a></li>
+</ul>
+</li>
+<li><a href="#Frequently-Asked-Questions" title="Frequently Asked Questions">Frequently Asked Questions</a><ul class="nav">
+<li><a href="#Even-when-char-and-short-have-the-same-size-they-have-different-range" title="Even when char and short have the same size, they have different range.">Even when char and short have the same size, they have different range.</a></li>
+<li><a href="#Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values" title="Why using float is not preferred when dealing with higher floating point values.">Why using float is not preferred when dealing with higher floating point values.</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#Java-CS003-Winter-Live" title="Java-CS003-Winter Live">Java-CS003-Winter Live</a><ul class="nav">
+<li><a href="#-Listings-and-Instructions" title=" Listings and Instructions"> Listings and Instructions</a></li>
+<li><a href="#-Topics-Covered-Here" title=" Topics Covered Here"> Topics Covered Here</a></li>
+<li><a href="#-Frequently-Asked-QuestionsFAQs" title=" Frequently Asked Questions(FAQs)"> Frequently Asked Questions(FAQs)</a></li>
+<li><a href="#Topic-1-Identifiers" title="Topic 1: Identifiers">Topic 1: Identifiers</a><ul class="nav">
+<li><a href="#Sub-topic-A--Identifiers" title="Sub-topic A : Identifiers">Sub-topic A : Identifiers</a></li>
+<li><a href="#Sub-Topic-B-Rules-of-Identifiers-or-Nomenclature" title="Sub-Topic B: Rules of Identifiers or Nomenclature">Sub-Topic B: Rules of Identifiers or Nomenclature</a></li>
+<li><a href="#Sub-Topic-C-Test-Yourself" title="Sub Topic C: Test Yourself">Sub Topic C: Test Yourself</a></li>
+</ul>
+</li>
+<li><a href="#Conclusions" title="Conclusions">Conclusions</a></li>
+<li><a href="#Topic-2-Datatypes" title="Topic 2: Datatypes">Topic 2: Datatypes</a><ul class="nav">
+<li><a href="#What-are-Datatypes" title="What are Datatypes?">What are Datatypes?</a></li>
+<li><a href="#Case-Study--Local-Variable-Type-Inferencing" title="Case Study : Local Variable Type Inferencing">Case Study : Local Variable Type Inferencing</a></li>
+<li><a href="#Is-Java-Statically-Typed-Language" title="Is Java Statically Typed Language?">Is Java Statically Typed Language?</a></li>
+<li><a href="#Question-Do-you-think-that-Java-is-still-statically-typed-after-the-introduction-of-Local-Variable-Type-Inferencing-in-JDK-10" title="Question: Do you think that Java is still statically typed after the introduction of Local Variable Type Inferencing in JDK 10.?">Question: Do you think that Java is still statically typed after the introduction of Local Variable Type Inferencing in JDK 10.?</a></li>
+</ul>
+</li>
+<li><a href="#Fooling-around-with-Java-Datatypes" title="Fooling around with Java Datatypes.">Fooling around with Java Datatypes.</a></li>
+</ul>
+</li>
+<li><a href="#Integral-Datatypes" title="Integral Datatypes">Integral Datatypes</a><ul class="nav">
+<li><a href="#byte" title="byte">byte</a><ul class="nav">
+<li><a href="#Operations-on-a-byte-datatype" title="Operations on a byte datatype">Operations on a byte datatype</a></li>
+</ul>
+</li>
+<li><a href="#short" title="short">short</a><ul class="nav">
+<li><a href="#Operations-on-a-short-datatype" title="Operations on a short datatype">Operations on a short datatype</a></li>
+</ul>
+</li>
+<li><a href="#int" title="int">int</a><ul class="nav">
+<li><a href="#Operations-on-a-int-datatype" title="Operations on a int datatype">Operations on a int datatype</a></li>
+</ul>
+</li>
+<li><a href="#long" title="long">long</a><ul class="nav">
+<li><a href="#Operations-on-long-datatype" title="Operations on long datatype.">Operations on long datatype.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Floating-Point-Types" title="Floating-Point Types">Floating-Point Types</a><ul class="nav">
+<li><a href="#float" title="float">float</a><ul class="nav">
+<li><a href="#Operations-on-float-datatype" title="Operations on float datatype">Operations on float datatype</a></li>
+</ul>
+</li>
+<li><a href="#double" title="double">double</a><ul class="nav">
+<li><a href="#Operations-on-double-datatype" title="Operations on double datatype">Operations on double datatype</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Character" title="Character">Character</a><ul class="nav">
+<li><a href="#char" title="char">char</a></li>
+</ul>
+</li>
+<li><a href="#Boolean" title="Boolean">Boolean</a><ul class="nav">
+<li><a href="#boolean" title="boolean">boolean</a><ul class="nav">
+<li><a href="#Operations-on-boolean-datatype" title="Operations on boolean datatype">Operations on boolean datatype</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#How-Prepared-you-Are" title="How Prepared you Are?">How Prepared you Are?</a></li>
+<li><a href="#Variables" title="Variables">Variables</a><ul class="nav">
+<li><a href="#Identifier-VS-Variable" title="Identifier VS Variable">Identifier VS Variable</a></li>
+</ul>
+</li>
+<li><a href="#Frequently-Asked-Questions" title="Frequently Asked Questions">Frequently Asked Questions</a><ul class="nav">
+<li><a href="#Even-when-char-and-short-have-the-same-size-they-have-different-range" title="Even when char and short have the same size, they have different range.">Even when char and short have the same size, they have different range.</a></li>
+<li><a href="#Why-using-float-is-not-preferred-when-dealing-with-higher-floating-point-values" title="Why using float is not preferred when dealing with higher floating point values.">Why using float is not preferred when dealing with higher floating point values.</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
